@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tolov sahifasi</title>
+    <meta name="description" content="UPGRADE ENGLISH 5.0" />
+    <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
+    <link rel="preload" as="font" href="./fonts/Montserrat-Bold.woff2" type="font/ttf" crossorigin />
+    <link rel="preload" as="font" href="./fonts/Montserrat-SemiBold.ttf" type="font/ttf" crossorigin />
+    <link rel="preload" as="font" href="./fonts/Montserrat-Medium.ttf" type="font/ttf" crossorigin />
+    <link rel="preload" as="font" href="./fonts/Montserrat-Regular.ttf" type="font/ttf" crossorigin />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: MontserratNormal, sans-serif;
+        }
+
+        .main {
+            background-image: radial-gradient(circle,
+                    #e50909,
+                    #ce1414,
+                    #b81616,
+                    #a21616,
+                    #8c1212,
+                    #7f0f0f,
+                    #720b0b,
+                    #660707,
+                    #5e0707,
+                    #560808,
+                    #4f0909,
+                    #470a0a);
+        }
+
+        .main-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .main-plan {
+            background: #fff;
+            border-radius: 30px;
+            padding: 2px 2px 30px;
+        }
+
+        .plan-header {
+            background: #001c1c;
+            padding: 20px 31px;
+            border-radius: 30px 30px 0 0;
+            margin-bottom: 24px;
+        }
+
+        .line {
+            margin: 0 auto;
+            display: flex;
+            object-fit: contain;
+            width: 80%;
+            filter: invert(1);
+        }
+
+        .plan-header-bottom {
+            display: flex;
+            justify-content: space-between;
+            max-width: 335px;
+            margin: 0 auto;
+        }
+
+        .plan-header-bottom-text {
+            font-family: MontserratSemiBold, sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .plan-header-bottom-text:nth-child(2) {
+            margin-left: 20px;
+        }
+
+        .plan-title {
+            font-family: MontserratBold, sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 100%;
+            padding: 20px;
+            background: #0d0d0d;
+            border-radius: 8px;
+            color: #fff;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        .plan-date {
+            margin-top: 12px;
+            font-family: MontserratNormal, sans-serif;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 11px;
+            font-weight: 400;
+        }
+
+        b {
+            font-family: MontserratBold, sans-serif;
+            font-weight: 700;
+        }
+
+        .plan-description {
+            font-family: MontserratBold, sans-serif;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0 auto 10px;
+        }
+
+        .center {
+            padding: 0 20px;
+        }
+
+        .plan-select-now {
+            text-align: center;
+            font-family: MontserratNormal, sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        .form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .form__col {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .label {
+            font-family: MontserratSemiBold, sans-serif;
+            font-size: 16px;
+            margin-bottom: 2px;
+        }
+
+        .input {
+            padding: 8px 12px;
+            border-radius: 10px;
+            border: 1px solid #000;
+            outline: none;
+            font-size: 18px;
+        }
+
+        .plan-list-btn {
+            font-family: MontserratSemiBold, sans-serif;
+            width: 100%;
+            text-align: center;
+            background: #12a3a3;
+            border: 1px solid #12a3a3;
+            padding: 9px 31px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        footer {
+            background: #000;
+            padding: 40px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 384px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .footer-title {
+            font-family: MontserratMedium, sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .footer__number {
+            padding: 0 8px;
+            border: 1px solid #fff;
+            max-width: 160px;
+            margin: 0 auto;
+            border-radius: 10px;
+            font-family: MontserratNormal, sans-serif;
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer__link-telegram {
+            background: #d1444e;
+            padding: 8px 12px;
+            border-radius: 10px;
+            max-width: 289px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-family: MontserratNormal, sans-serif;
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+            margin: 0 auto;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/index.css" media="print" onload="this.media='all'" />
+</head>
+
+<body>
+    <section class="main">
+        <div class="main-container">
+            <div class="main-plan">
+                <div class="plan-header">
+                    <img alt="Supermiya" class="line" src="./images/line.webp" width="335" height="28" loading="lazy" />
+                    <div class="plan-header-bottom">
+                        <p class="plan-header-bottom-text">
+                            Mutlaqo <br />
+                            ishonchli
+                        </p>
+                        <p class="plan-header-bottom-text">
+                            To‘lov <br />
+                            qilish
+                        </p>
+                        <p class="plan-header-bottom-text">Yakunlash</p>
+                    </div>
+                </div>
+                <div class="center">
+                    <h2 class="plan-title">Yagona ayol</h2>
+                    <p class="plan-date"><b>Start:</b> 19-sentabr</p>
+                    <p class="plan-description">
+                        2 oy ichida ingliz tilini tez va oson o’rganing
+                    </p>
+                    <p class="plan-select-now">
+                        Hamma formani to‘ldiring va ishtirok etishga kirishing!
+                    </p>
+                    <form id="form" class="form">
+                        <div class="form__col">
+                            <label for="name" class="label">Ism familiyangiz:</label>
+                            <input type="text" id="name" name="Ism" class="input" autocomplete="name" required />
+                        </div>
+                        <div class="form__col">
+                            <label for="phone__number" class="label">Telefon raqamingiz:</label>
+                            <input type="tel" id="phone__number" name="Telefon raqam" class="input" autocomplete="tel"
+                                required value="998" pattern="998[0-9]{7,9}"
+                                title="Iltimos, to‘liq telefon raqamingizni 998 bilan birga kiriting" maxlength="12" />
+
+                        </div>
+                        <div class="form__col">
+                            <label for="tarif" class="label">Tarifni tanlash:</label>
+                            <select id="course" name="Tarif" class="input">
+                                <option value="Yagona ayol" selected>Yagona ayol - 420,000 so'm</option>
+                                <!-- <option value="Mustaqil ayol" selected>
+                                    Mustaqil ayol - 465,000 so'm
+                                </option> -->
+                            </select>
+                        </div>
+                        <button class="plan-list-btn">DAVOM ETISH</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <footer>
+      <div class="footer-container">
+        <p class="footer-title">
+         Toshqondiy Akademiyasi MChJ, barcha huquqlar himoyalangan, 2025
+        </p>
+        <a href="tel:+998781137044" class="footer__number">+998 77 479 05 36</a>
+        <div class="footer-title">Телеграмдан боғланиш:</div>
+        <a
+          target="_blank"
+          href="https://t.me/linguabarno_support"
+          class="footer__link-telegram"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.41718 15.1853L9.02018 20.7693C9.58818 20.7693 9.83418 20.5253 10.1292 20.2323L12.7922 17.6873L18.3102 21.7283C19.3222 22.2923 20.0352 21.9953 20.3082 20.7973L23.9302 3.82531L23.9312 3.82431C24.2522 2.32831 23.3902 1.74331 22.4042 2.11031L1.11418 10.2613C-0.338822 10.8253 -0.316822 11.6353 0.867178 12.0023L6.31018 13.6953L18.9532 5.78431C19.5482 5.39031 20.0892 5.60831 19.6442 6.00231L9.41718 15.1853Z"
+              fill="white"
+            ></path>
+          </svg>
+          Ёрдамчи билан боғланиш
+        </a>
+      </div>
+    </footer> -->
+    <script defer src="./js/app.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

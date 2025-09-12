@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Payment Form</title>
+
+    <link href="../css/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <base href="/payment/" />
+
+    <style>
+        body {
+            min-height: max(884px, 100dvh)
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 font-sans">
+    <div class="container mx-auto p-4 max-w-md">
+        <!-- Header -->
+        <header class="flex items-center justify-between py-4">
+            <div></div>
+            <div class="flex items-center space-x-3">
+                <div class="text-right">
+                    <p id="name" class="text-sm font-semibold text-gray-800">Sardor</p>
+                    <p id="phone" class="text-xs text-gray-500">998331234567</p>
+                </div>
+                <img alt="User avatar" class="w-10 h-10 rounded-full"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYkk8wpG7h3qefU7VlPmswLJsHGRoVHlLwz5BjCah9hoQwYFSkGT5Vhp-5ccMa5b5TdCkwQMADYH7OuVa0b5SYAGVq6EhP9fg2a8JaH-gfXHR6j0AP_s2joTxuwMYdySdW3sC37FrCuEqMHhIXrLNTxEs-myG2takDk8i6GpajLphLMTnnDgZfNDbc-jGRP9fK96rZZPXv-td88J8ZR6YM8Wbh-DvsgsMoGnbBO7RmKyy7iucGFgOTXSTIyEInihSs7VztSWo3dfM" />
+            </div>
+        </header>
+
+        <!-- Hero / Price -->
+        <div class="bg-blue-100 rounded-xl p-6 mb-6">
+            <h1 class="text-2xl font-bold text-gray-800 uppercase">3 kunlik online marafon</h1>
+            <p class="payment__tariff text-sm text-gray-600 mb-2">Tarif: Yagona ayol</p>
+
+            <div class="flex items-end gap-2 mb-2">
+                <!-- JS will update this to 420 000 yoki 465 000 -->
+                <p class="pricesAll text-4xl font-bold text-gray-900">420 000 so'm</p>
+                <span class="priceVisa text-sm text-gray-500"></span>
+            </div>
+
+            <div class="flex justify-between items-center text-sm">
+                <p class="text-gray-600">To'lov qilish havola muddati tugashiga qoldi:</p>
+                <span id="countdown" class="bg-white text-red-500 font-semibold px-3 py-1 rounded-full">15:00</span>
+            </div>
+        </div>
+
+        <!-- Payme ONLY -->
+        <p class="text-sm text-gray-700 mb-4">1. Quyidagi Payme havolasi orqali to‘lovni amalga oshiring:</p>
+        <div class="grid grid-cols-1 gap-4 mb-6">
+            <a id="paymeLink" class="block" target="_blank" href="#">
+                <div class="bg-white border border-gray-200 rounded-lg p-4 text-center hover:shadow">
+                    <img alt="Payme logo" class="h-12 mx-auto mb-2" src="/images/payme_color.svg" />
+                    <p class="text-xs text-gray-500">Payme orqali to'lovga o'tish</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Upload & Submit -->
+        <p class="text-sm text-gray-700 mb-4">2. To'lovingiz chek (screenshot) rasmini yuklang</p>
+
+        <form id="paymentForm" class="mb-8" enctype="multipart/form-data">
+            <input type="hidden" name="status" value="payme" />
+            <label for="chek"
+                class="uploadCheck cursor-pointer border-2 border-dashed border-gray-300 rounded-lg p-6 text-center block mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="inline transform -translate-y-[2px]">
+                    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                    <polyline points="13 2 13 9 20 9"></polyline>
+                </svg>
+                Chek rasmini yuklash uchun bu yerga bosing
+            </label>
+            <input id="chek" name="chek" type="file" accept="image/*,application/pdf" class="hidden" />
+
+            <button type="submit"
+                class="payment__btn w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg">
+                Davom etish
+            </button>
+        </form>
+
+        <div class="bg-red-50 rounded-lg p-6 text-center">
+            <h2 class="font-bold text-gray-800">Yordam kerakmi?</h2>
+            <p class="text-gray-700 mb-4">Yordamchimiz bilan bog'laning</p>
+            <a href="https://t.me/supermiya" target="_blank" class="block">
+                <button
+                    class="w-full bg-red-600 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 hover:bg-red-700 transition-colors">
+                    <span class="material-icons">send</span>
+                    <span>Yordamchi bilan bog'lanish</span>
+                </button>
+            </a>
+        </div>
+
+        <footer class="text-center text-xs text-gray-400 mt-8">
+            Barcha huquqlar himoyalangan 2025
+        </footer>
+    </div>
+
+    <script src="../js/pay.js" defer></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

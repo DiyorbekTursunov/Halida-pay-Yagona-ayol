@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Thank you for your purchase! Your Supermiya Business course starts on June 22.">
+    <title>Raxmat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #000;
+            color: #fff
+        }
+
+        .container {
+            padding: 32px 0
+        }
+
+        .card {
+            max-width: 512px;
+            margin: 0 auto;
+            padding: 24px;
+            border-radius: 12px
+        }
+
+        .check-icon {
+            margin: 0 auto;
+            display: block;
+            color: #22c55e
+        }
+
+        .title {
+            margin: 20px 0;
+            font-size: 30px;
+            font-weight: 600;
+            text-align: center;
+            background: linear-gradient(#ffd87b, #f6b703);
+            -webkit-background-clip: text;
+            color: transparent
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 18px;
+            font-weight: 500
+        }
+
+        .confirmation-box {
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, .5);
+            border-radius: 12px;
+            margin-bottom: 20px
+        }
+
+        .confirmation-box>p {
+            line-height: 1.5
+        }
+
+        .confirmation-title {
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+            background: linear-gradient(#ffd87b, #f6b703);
+            -webkit-background-clip: text;
+            color: transparent
+        }
+
+        .divider {
+            margin: 5px 0;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, .5)
+        }
+
+        .contact-button {
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            padding: 8px 12px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+            background: #d1444e;
+            border: 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+            cursor: pointer;
+            transition: background .2s
+        }
+
+        .contact-button:hover {
+            background: #2d2d2d
+        }
+
+        @media (min-width:640px) {
+            .card {
+                padding: 32px
+            }
+        }
+
+        @media print {
+            body {
+                background: #fff;
+                color: #000
+            }
+
+            .card {
+                box-shadow: none
+            }
+
+            .check-icon {
+                stroke: #000
+            }
+
+            .title,
+            .confirmation-title {
+                background: none;
+                color: #000
+            }
+
+            .contact-button {
+                background: #d1444e
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card"><svg width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="check-icon">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
+            <h1 class="title">Xaridingiz muvaffaqiyatli yakunlandi!</h1>
+            <div class="content">
+                <div class="confirmation-box">
+                    <p class="confirmation-title">Tasdiqlandi</p>
+                    <hr class="divider">
+                    <p>Kurs nomi: Yagona ayol</p>
+                    <p>Ism: <span class="ism">Bexruz Xasanboyev</span></p>
+                    <p>Telefon: <span class="tel">998232332323</span></p>
+                    <!-- <p>Tarif: <span class="tarif"></span></p> -->
+                </div>
+            </div><a href="https://t.me/linguabarno_support" class="contact-button" aria-label="Contact via Telegram"><svg
+                    width="24" height="24" viewBox="0 0 24 24" fill="#fff">
+                    <path
+                        d="M9.42 15.18l-.4 5.58c.57 0 .81-.24 1.11-.53l2.66-2.55 5.52 4.04c1.01.57 1.72.27 2-.93l3.62-17-1-1c.32-1.5-.54-2.08-1.53-1.71L1.11 10.26c-1.35.57-1.33 1.38-.15 1.74l5.44 1.69 12.64-7.91c.6-.39 1.14-.18.69.22z" />
+                </svg>Yordamchi bilan boglanish</a>
+        </div>
+    </div>
+    <script src="../js/thankYou.js"></script>
+</body>
+
+</html>
