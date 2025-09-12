@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tolov sahifasi</title>
-    <meta name="description" content="UPGRADE ENGLISH 5.0" />
+    <meta name="description" content="Yagona ayol" />
     <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
     <link rel="preload" as="font" href="./fonts/Montserrat-Bold.woff2" type="font/ttf" crossorigin />
     <link rel="preload" as="font" href="./fonts/Montserrat-SemiBold.ttf" type="font/ttf" crossorigin />
@@ -277,6 +277,16 @@
                                 </option> -->
                             </select>
                         </div>
+                        <!-- Oferta agreement -->
+                        <div style="margin: 15px 0; font-size: 14px;">
+                            <label>
+                                <input type="checkbox" id="agreeOferta" required/>
+                                <a href="https://telegra.ph/MOTIVATORLIK-HIZMATLARI-B%D0%8EJICHA-OMMAVIJ-OFERTA-SHARTNOMASI-09-12"
+                                    target="_blank" style="color: #555; text-decoration: underline;">
+                                    Ommaviy oferta shartnomasiga roziman
+                                </a>
+                            </label>
+                        </div>
                         <button class="plan-list-btn">DAVOM ETISH</button>
                     </form>
                 </div>
@@ -313,6 +323,17 @@
     </footer> -->
     <script defer src="./js/app.js"></script>
     <script src="./js/app.js"></script>
+    <!-- Validation Script -->
+    <script>
+        function validateForm() {
+            var checkbox = document.getElementById("agreeOferta");
+            if (!checkbox.checked) {
+                alert("Iltimos, ommaviy oferta shartnomasiga rozilik bildiring.");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </body>
 
 </html>
