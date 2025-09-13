@@ -264,9 +264,8 @@
                         <div class="form__col">
                             <label for="phone__number" class="label">Telefon raqamingiz:</label>
                             <input type="tel" id="phone__number" name="Telefon raqam" class="input" autocomplete="tel"
-                                required value="998" pattern="998[0-9]{7,9}"
-                                title="Iltimos, to‘liq telefon raqamingizni 998 bilan birga kiriting" maxlength="12" />
-
+                                required pattern="(\+998[0-9]{9}|[0-9]{9,12})" value="+998"
+                                title="Iltimos, telefon raqamingizni +998 bilan yoki to‘liq raqam sifatida kiriting" />
                         </div>
                         <div class="form__col">
                             <label for="tarif" class="label">Tarifni tanlash:</label>
